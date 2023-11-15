@@ -12,7 +12,7 @@ export class SendNotifComponent {
   constructor(private http: HttpClient) { }
 
   submitForm() {
-    this.http.post('http://localhost:5000/send-notif', this.notification)
+    this.http.post('https://express-pwa-test.onrender.com/send-notif', this.notification)
       .subscribe(response => {
         console.log('Notification envoyée avec succès', response);
         this.notification = { title: '', body: '', icon: 'assets/icons/icon-384x384.png' };

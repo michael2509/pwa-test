@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     }).then(subscription => {
       console.log(JSON.stringify(subscription));
 
-      this.httpClient.post("http://localhost:5000/subscribe", subscription).subscribe(() => {
+      this.httpClient.post("https://express-pwa-test.onrender.com/subscribe", subscription).subscribe(() => {
         console.log("subscribed to notification");
       });
     }).catch(error => console.log);
